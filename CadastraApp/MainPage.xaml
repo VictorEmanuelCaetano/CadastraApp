@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models ="clr-namespace:CadastraApp.Models"
+             x:DataType="models:Evento"
+             x:Class="CadastraApp.MainPage">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+            <Label Text="Nome do Evento:" ></Label>
+            <Entry Text="{Binding Nome}"></Entry>
+            <Label Text="Data de Início"></Label>
+            <DatePicker Format="dd/MM/yyyy" Date="{Binding DataInicio}"></DatePicker>
+            <Label Text="Data de Término"></Label>
+            <DatePicker Format="dd/MM/yyyy" Date="{Binding DataTermino}"></DatePicker>
+            <Label Text="Número de participantes"></Label>
+            <Entry Text="{Binding QtdParticipantes}"></Entry>
+            <Label Text="Local"></Label>
+            <Entry Text="{Binding Local}"></Entry>   
+            <Label Text="Custo por Participante"></Label>
+            <Entry Text="{Binding CustoParticipante}"></Entry>
+
+            <Button Text="Cadastrar" Clicked="OnCadastrarClicado"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
